@@ -23,3 +23,8 @@ Site: https://docs.expo.io/versions/v36.0.0/sdk/mail-composer/
 ```
 $ yarn add expo-mail-composer
 ```
+
+## Axios
+```
+$ yarn add axios
+```
