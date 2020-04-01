@@ -17,3 +17,9 @@ $ yarn add @react-navigation/stack
 ```
 $ yarn add expo-constants
 ```
+
+### Mail Composer
+Site: https://docs.expo.io/versions/v36.0.0/sdk/mail-composer/
+```
+$ yarn add expo-mail-composer
+```
