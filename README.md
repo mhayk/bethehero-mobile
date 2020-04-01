@@ -12,3 +12,8 @@ Site: https://reactnavigation.org/docs/hello-react-navigation
 ```
 $ yarn add @react-navigation/stack
 ```
+
+### Constants
+```
+$ yarn add expo-constants
+```
