@@ -28,3 +28,8 @@ $ yarn add expo-mail-composer
 ```
 $ yarn add axios
 ```
+
+## Intl
+```
+$ yarn add intl
+```

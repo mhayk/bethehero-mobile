@@ -53,7 +53,12 @@ export default function Incidents() {
                         <Text style={styles.incidentValue}>{incident.title}</Text>
 
                         <Text style={styles.incidentProperty}>VALUE:</Text>
-                        <Text style={styles.incidentValue}>{incident.value}</Text>
+                        <Text style={styles.incidentValue}>
+                            {Intl.NumberFormat('en-GB', {
+                                style: 'currency',
+                                currency: 'GBP'
+                                }).format(incident.value)}
+                                </Text>
 
                         <TouchableOpacity
                         style={styles.detailsButton}
