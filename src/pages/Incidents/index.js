@@ -14,8 +14,8 @@ export default function Incidents() {
     const [total, setTotal] = useState(0)
     const navigation = useNavigation();
 
-    function navigateToDetail() {
-        navigation.navigate('Detail');
+    function navigateToDetail(incident) {
+        navigation.navigate('Detail', { incident });
     }
 
     async function loadIncidents() {
@@ -48,27 +48,27 @@ export default function Incidents() {
             showsVerticalScrollIndicator={false}
             renderItem={({ item: incident }) => (
                 <View style={styles.incident}>
-                        <Text style={styles.incidentProperty}>ONG:</Text>
-                        <Text style={styles.incidentValue}>{incident.name}</Text>
+                    <Text style={styles.incidentProperty}>ONG:</Text>
+                    <Text style={styles.incidentValue}>{incident.name}</Text>
 
-                        <Text style={styles.incidentProperty}>INCIDENT:</Text>
-                        <Text style={styles.incidentValue}>{incident.title}</Text>
+                    <Text style={styles.incidentProperty}>INCIDENT:</Text>
+                    <Text style={styles.incidentValue}>{incident.title}</Text>
 
-                        <Text style={styles.incidentProperty}>VALUE:</Text>
-                        <Text style={styles.incidentValue}>
-                            {Intl.NumberFormat('en-GB', {
-                                style: 'currency',
-                                currency: 'GBP'
-                                }).format(incident.value)}
-                                </Text>
+                    <Text style={styles.incidentProperty}>VALUE:</Text>
+                    <Text style={styles.incidentValue}>
+                        {Intl.NumberFormat('en-GB', {
+                            style: 'currency',
+                            currency: 'GBP'
+                            }).format(incident.value)}
+                            </Text>
 
-                        <TouchableOpacity
-                        style={styles.detailsButton}
-                        onPress={navigateToDetail}>
-                            <Text style={styles.detailsButtonText}>More details</Text>
-                            <Feather name="arrow-right" size={16} color="#e02041" />
-                        </TouchableOpacity>
-                    </View>
+                    <TouchableOpacity
+                    style={styles.detailsButton}
+                    onPress={() => navigateToDetail(incident)}>
+                        <Text style={styles.detailsButtonText}>More details</Text>
+                        <Feather name="arrow-right" size={16} color="#e02041" />
+                    </TouchableOpacity>
+                </View>
             )}
             />
         </View>
